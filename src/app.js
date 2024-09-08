@@ -1,7 +1,11 @@
 
 import { useLaunch } from '@tarojs/taro'
+import { Provider } from 'react-redux'
+import configStore from './store'
 
 import './app.less'
+
+const store = configStore()
 
 function App({ children }) {
   useLaunch(() => {
@@ -9,7 +13,11 @@ function App({ children }) {
   })
 
   // children 是将要会渲染的页面
-  return children
+  return (
+    <Provider store={store}>
+      {children}
+    </Provider>
+  );
 }
   
 
