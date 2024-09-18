@@ -1,4 +1,4 @@
-import { View, Image, Text } from '@tarojs/components'
+import { View, Image } from '@tarojs/components'
 import { useLoad, useDidShow } from '@tarojs/taro'
 import  { useState } from 'react';
 import './index.less'

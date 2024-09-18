@@ -1,9 +1,7 @@
-import Taro from "@tarojs/taro";
 import { View, Text } from '@tarojs/components'
-import { useLoad, useDidShow } from '@tarojs/taro'
+import { Taro, useLoad, useDidShow } from '@tarojs/taro'
 import './index.less'
-import { checkHasLogined, authorize } from '../../utils/index.js'
-import React, { useState } from 'react';
+import { checkHasLogined } from '../../utils/index.js'
 
 export default function Index () {
   useLoad(() => {
