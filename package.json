@@ -36,6 +36,7 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.24.4",
+    "@reduxjs/toolkit": "^2.2.7",
     "@tarojs/components": "4.0.5",
     "@tarojs/helper": "4.0.5",
     "@tarojs/plugin-framework-react": "4.0.5",

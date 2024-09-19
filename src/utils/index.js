@@ -1,5 +1,5 @@
 import Taro from "@tarojs/taro";
-import { post, get } from '../services/api.js' 
+import api from '../services/api.js' 
 
 const checkSession = async () => {
   return new Promise((resolve, reject) => {
@@ -34,7 +34,7 @@ export const authorize = async () => {
     Taro.login({
       success: (res) => {
         const code = res.code
-        post('wechat/wechatLogin', {code: code}).then(data => {
+        api.post('wechat/wechatLogin', {code: code}).then(data => {
           if(data.code === 0) {
             const loginData = data.data;
             Taro.setStorageSync('token', loginData.token)
@@ -56,5 +56,5 @@ export const authorize = async () => {
 }
 
 export const getUserInfo = async () => {
-  return get('users/' + Taro.getStorageSync('uid'))
+  return api.get('users/' + Taro.getStorageSync('uid'))
 }
