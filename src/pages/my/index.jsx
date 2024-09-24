@@ -3,7 +3,7 @@ import { useLoad, useDidShow } from "@tarojs/taro";
 import { useState } from "react";
 import "./index.less";
 import { checkHasLogined, authorize, getUserInfo } from "../../utils/index.js";
-import defaultPng from "../../../images/default.png";
+import defaultPng from "../../images/default.png";
 
 export default function Index() {
   // 使用 useState 定义一个状态变量 userInfo，初始值为一个空对象

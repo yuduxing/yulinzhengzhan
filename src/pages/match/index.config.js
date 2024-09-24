@@ -1,3 +1,3 @@
 export default definePageConfig({
-  navigationBarTitleText: '新建'
+  navigationBarTitleText: '赛事'
 })
