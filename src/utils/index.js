@@ -1,5 +1,5 @@
 import Taro from "@tarojs/taro";
-import api from '../services/api.js' 
+import api from '../services/api' 
 
 const checkSession = async () => {
   return new Promise((resolve, reject) => {
@@ -41,10 +41,7 @@ export const authorize = async () => {
             Taro.setStorageSync('uid', loginData.uid)
             resolve(data)
           } else {
-            Taro.showToast({
-              title: data.msg,
-              icon: 'none'              
-            })
+            reject(new Error(data.msg))
           }
         })
       },
