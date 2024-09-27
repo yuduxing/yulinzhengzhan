@@ -14,14 +14,14 @@ export default defineAppConfig({
       {
         pagePath: 'pages/index/index',
         text: '新建',
-        iconPath: 'images/icon/add_light.png',
-        selectedIconPath: 'images/icon/add.png',
+        iconPath: 'images/icon/add.png',
+        selectedIconPath: 'images/icon/add_active.png',
       },
       {
         pagePath: 'pages/match/index',
         text: '赛事',
-        iconPath: 'images/icon/find.png',
-        selectedIconPath: 'images/icon/find_active.png',
+        iconPath: 'images/icon/match.png',
+        selectedIconPath: 'images/icon/match_active.png',
       },
       {
         pagePath: 'pages/my/index',

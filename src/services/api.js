@@ -11,10 +11,12 @@ export default {
       ...data,
       timestamp: new Date().getTime(),
     };
+    const requestUrl = url.indexOf("http") !== -1 ? url : BaseUrl + url;
+    console.log("requestUrl:" + requestUrl)
 
     return new Promise((resolve, reject) => {
       Taro.request({
-        url: url.indexOf("http") !== -1 ? url : BaseUrl + url,
+        url: requestUrl,
         data: data,
         method: method,
         header: {

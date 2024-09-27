@@ -26,6 +26,7 @@ export const checkHasLogined = async () => {
     return false
   }
 
+  console.log("Has logined" + token)
   return true
 }
 
@@ -34,6 +35,7 @@ export const authorize = async () => {
     Taro.login({
       success: (res) => {
         const code = res.code
+        console.log("code:" + code)
         api.post('wechat/wechatLogin', {code: code}).then(data => {
           if(data.code === 0) {
             const loginData = data.data;
