@@ -6,6 +6,8 @@ export default defineAppConfig({
     navigationBarBackgroundColor: "#fff",
     navigationBarTitleText: "羽林征战",
     navigationBarTextStyle: "black",
+    enablePullDownRefresh: true,
+    onReachBottomDistance: 40,
   },
   tabBar: {
     selectedColor: '#337ab7',

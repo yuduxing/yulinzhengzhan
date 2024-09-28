@@ -7,10 +7,13 @@ function App({ children }) {
     console.log("App launched.");
     console.log("onLaunch", options);
     Taro.setStorageSync("enterPath", options.path);
+    Taro.setStorageSync("logined", 0)
     Taro.getSystemInfo().then((sysRes) => {
       Taro.setStorageSync("sys_info", sysRes);
     });
-    authorize().catch((err) => {
+    authorize().then(() => {
+      Taro.setStorageSync("logined", 1)
+    }).catch((err) => {
       Taro.showModal({
         title: "授权失败",
         content: err.message,
